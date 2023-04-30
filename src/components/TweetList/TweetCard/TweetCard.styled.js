@@ -1,21 +1,15 @@
 import styled from 'styled-components';
 
-import { ReactComponent as Logo } from '../../images/logo.svg';
+import { ReactComponent as Logo } from '../../../images/logo.svg';
 
-export const Container = styled.div`
-  width: 1200px;
-  margin: 0 auto;
-  border: 1px solid tomato;
-`;
-
-export const CardWrapper = styled.div`
+export const CardWrapper = styled.li`
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 28px 0 36px;
   width: 380px;
-  /* height: 460px; */
+
   background: linear-gradient(
     114.99deg,
     #471ca9 -0.99%,
@@ -68,4 +62,37 @@ export const Tweets = styled.p`
 
 export const Followers = styled(Tweets)`
   margin-bottom: 26px;
+`;
+
+export const BtnFollow = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 28px;
+  width: 196px;
+
+  background: #ebd8ff;
+  /* background: ${p => p.bg}; */
+  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
+  border-radius: 10.3108px;
+  border: none;
+
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: #373737;
+  cursor: pointer;
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    background: #5cd3a8;
+  }
+`;
+
+export const BtnFollowing = styled(BtnFollow)`
+  background: #5cd3a8;
+  &:hover {
+    background: #ebd8ff;
+  }
 `;

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Image from '../Image/Image';
 
 export const AvatarWrapper = styled.div`
   display: flex;
@@ -22,7 +21,7 @@ export const AvatarUser = styled.div`
   overflow: hidden;
 `;
 
-export const AvatarImg = styled(Image)`
+export const AvatarImg = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
