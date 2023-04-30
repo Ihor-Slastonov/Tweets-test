@@ -4,6 +4,7 @@ export const GoBack = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 4px;
   padding: 8px;
   border: none;
   border-radius: 8px;

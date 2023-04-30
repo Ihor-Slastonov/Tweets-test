@@ -5,6 +5,10 @@ export const List = styled.ul`
   flex-wrap: wrap;
   align-items: center;
   gap: 28px;
+
+  @media (max-width: 1230px) {
+    justify-content: center;
+  }
 `;
 
 export const NavContainer = styled.div`
