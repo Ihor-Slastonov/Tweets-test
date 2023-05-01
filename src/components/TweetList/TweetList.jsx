@@ -3,10 +3,8 @@ import TweetCard from './TweetCard/TweetCard';
 import BackBtn from '../BackBtn/BackBtn';
 import FilterDropdown from '../FilterDropdown/FilterDropdown';
 
-import { v4 as uuidv4 } from 'uuid';
-
 import { List, NavContainer } from './TweetList.styled';
-
+import BackToTopBtn from '../BackToTopBtn/BackToTopBtn';
 
 function TweetList({ tweets }) {
   const [filter, setFilter] = useState('all');
@@ -41,7 +39,7 @@ function TweetList({ tweets }) {
       <List>
         {filteredTweets.map(tweet => (
           <TweetCard
-            key={uuidv4()}
+            key={tweet.id}
             tweets={tweet.tweets}
             followers={tweet.followers}
             avatar={tweet.avatar}
@@ -49,6 +47,7 @@ function TweetList({ tweets }) {
           />
         ))}
       </List>
+      <BackToTopBtn />
     </>
   );
 }

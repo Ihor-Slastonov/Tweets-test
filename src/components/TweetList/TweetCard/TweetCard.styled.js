@@ -1,6 +1,16 @@
-import styled from 'styled-components';
-
+import styled, { keyframes } from 'styled-components';
 import { ReactComponent as Logo } from '../../../images/logo.svg';
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 export const CardWrapper = styled.li`
   position: relative;
@@ -18,6 +28,8 @@ export const CardWrapper = styled.li`
   );
   box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
   border-radius: 20px;
+  animation: ${fadeIn} 0.5s linear;
+
 `;
 
 export const CardLogo = styled(Logo)`
@@ -72,7 +84,6 @@ export const BtnFollow = styled.button`
   width: 196px;
 
   background: #ebd8ff;
-  /* background: ${p => p.bg}; */
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
   border-radius: 10.3108px;
   border: none;
@@ -85,14 +96,16 @@ export const BtnFollow = styled.button`
   cursor: pointer;
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:hover {
+  &:hover,
+  :focus {
     background: #5cd3a8;
   }
 `;
 
 export const BtnFollowing = styled(BtnFollow)`
   background: #5cd3a8;
-  &:hover {
+  &:hover,
+  :focus {
     background: #ebd8ff;
   }
 `;

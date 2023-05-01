@@ -1,10 +1,18 @@
 import styled from 'styled-components';
 
+export const AppContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`;
+export const Content = styled.main`
+  flex: 1;
+`;
+
 export const Container = styled.div`
   max-width: 1230px;
   margin: 0 auto;
   padding: 0 15px;
-  border: 1px solid tomato;
 `;
 
 export const Header = styled.header`
@@ -13,4 +21,25 @@ export const Header = styled.header`
   background-color: #453c67;
 `;
 
+export const Footer = styled.footer`
+  padding: 16px 0;
+  background-color: #453c67;
+`;
 
+export const FooterText = styled.p`
+  margin-right: 10px;
+  text-align: center;
+  font-size: 16px;
+  color: #ebd8ff;
+`;
+
+export const FooterTextWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const Link = styled.a`
+  text-transform: uppercase;
+  font-weight: 600;
+`;
