@@ -29,7 +29,6 @@ export const CardWrapper = styled.li`
   box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
   border-radius: 20px;
   animation: ${fadeIn} 0.5s linear;
-
 `;
 
 export const CardLogo = styled(Logo)`

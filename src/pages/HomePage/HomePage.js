@@ -35,7 +35,8 @@ function HomePage() {
           </AboutText>
         </AboutWrapper>
         <GoTweetsLink to="tweets">
-          Go to tweets<ArrowRightCircleIcon width={42}/>
+          Go to tweets
+          <ArrowRightCircleIcon width={42} />
         </GoTweetsLink>
       </Container>
     </Section>

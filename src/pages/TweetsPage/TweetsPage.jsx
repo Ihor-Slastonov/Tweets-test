@@ -14,7 +14,6 @@ function TweetsPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [pageLimit, setPageLimit] = useState(false);
 
-
   useEffect(() => {
     (async () => {
       try {
@@ -35,6 +34,9 @@ function TweetsPage() {
 
   const onLoadMore = () => {
     setCurrentPage(prevPage => prevPage + 1);
+    setTimeout(() => {
+      window.scrollBy({ top: 500, behavior: 'smooth' });
+    }, 200);
   };
 
   return (
@@ -45,7 +47,9 @@ function TweetsPage() {
           <>
             <TweetList tweets={tweets} />
             {!pageLimit && (
-              <LoadMoreBtn onClick={onLoadMore}>Load more</LoadMoreBtn>
+              <LoadMoreBtn id="moreBtn" onClick={onLoadMore}>
+                Load more
+              </LoadMoreBtn>
             )}
           </>
         )}
